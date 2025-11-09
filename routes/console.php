@@ -1,5 +1,7 @@
 <?php
 
+use App\Services\News\Factory\NewsAggregatorFactory;
+use App\Types\NewsSource;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 

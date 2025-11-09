@@ -123,4 +123,13 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'news' => [
+        /**
+         * A list of keywords that aggregated news will be narrowed tos.
+         */
+        'keywords' => preg_split(
+            '/{\s,}|,/',
+            env('APP_NEWS_KEYWORDS', 'technology,blockchain,crypto,entertainment')
+        ),
+    ]
 ];

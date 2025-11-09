@@ -1,0 +1,62 @@
+<?php
+
+namespace App\Services\News;
+
+use App\Services\News\Data\Article;
+use App\Services\News\Factory\NewsAggregatorContract;
+use App\Types\NewsSource;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
+use TypeError;
+
+class NewsApiNews implements NewsAggregatorContract
+{
+
+    public function articles(): array
+    {
+        $baseUrl = 'https://newsapi.org/v2';
+
+        $keywords = config('app.news.keywords');
+
+        $query = [
+            'q' => implode(' OR ', $keywords),
+            'pageSize' => 100,
+            'sortBy' => 'publishedAt',
+            'language' => 'en',
+        ];
+
+        $articles = Http::baseUrl($baseUrl)
+            ->withHeader('x-api-key', config('services.news_api.api_key'))
+            ->get("/everything", $query)->collect('articles');
+
+        return $articles->map(fn($article) => $this->formatArticle($article))->filter()->toArray();
+    }
+
+    private function formatArticle(array $article): ?Article
+    {
+        try {
+            // Use the longest of content or description as the article body.
+            $contents = Arr::only($article, ['content', 'description']);
+            usort($contents, fn($a, $b) => mb_strlen($b) > mb_strlen($a));
+            $content = $contents[0];
+
+            return new Article(
+                source: NewsSource::NewsApi,
+                title: $article['title'],
+                excerpt: $article['content'] ?? Str::limit($content, end: ''),
+                content: $content,
+                url: $article['url'],
+                imageUrl: $article['urlToImage'],
+                date: $article['publishedAt'],
+                authors: [
+                    $article['author'],
+                ],
+                categories: [],
+            );
+        } catch (TypeError $e) {
+            return null;
+        }
+    }
+}
