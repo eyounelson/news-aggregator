@@ -1,0 +1,853 @@
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2025 The New York Times Company. All Rights Reserved.",
+    "response": {
+        "docs": [
+            {
+                "abstract": "An inveterate tinkerer, he built groundbreaking guitars that were displayed in art galleries and played by Joni Mitchell, Trent Reznor and many others.",
+                "byline": {
+                    "original": "By Alex Williams"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "Ken Parker, Who Sought to Reinvent the Guitar, Dies at 73",
+                    "kicker": "",
+                    "print_headline": ""
+                },
+                "_id": "nyt:\/\/article\/2d21bb5b-66cb-5d1c-8841-7837d84a3c8e",
+                "keywords": [
+                    {
+                        "name": "Person",
+                        "value": "Parker, Ken (1952-2025)",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Deaths (Obituaries)",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Guitars",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Pop and Rock Music",
+                        "rank": 4
+                    }
+                ],
+                "multimedia": {
+                    "caption": "",
+                    "credit": "",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/10\/15\/obituaries\/00ken-parker-cinemagraph-image\/00ken-parker-cinemagraph-image-articleLarge.jpg",
+                        "height": 338,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/10\/15\/obituaries\/00ken-parker-cinemagraph-image\/00ken-parker-cinemagraph-image-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "Obits",
+                "print_page": "",
+                "print_section": "",
+                "pub_date": "2025-11-09T21:50:22Z",
+                "section_name": "Arts",
+                "snippet": "An inveterate tinkerer, he built groundbreaking guitars that were displayed in art galleries and played by Joni Mitchell, Trent Reznor and many others.",
+                "source": "The New York Times",
+                "subsection_name": "Music",
+                "type_of_material": "Obituary (Obit)",
+                "uri": "nyt:\/\/article\/2d21bb5b-66cb-5d1c-8841-7837d84a3c8e",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/arts\/music\/ken-parker-dead.html",
+                "word_count": 1124
+            },
+            {
+                "abstract": "This year\u2019s U.N. climate talks are being held in Brazil and, so far, they\u2019ve been noteworthy for who isn\u2019t attending.",
+                "byline": {
+                    "original": "By Katrin Bennhold"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "Tackling Climate Change Without the U.S.",
+                    "kicker": "",
+                    "print_headline": ""
+                },
+                "_id": "nyt:\/\/article\/b0dd312c-9d1d-52cd-84b4-483436adff9b",
+                "keywords": [
+                    {
+                        "name": "Subject",
+                        "value": "United Nations Framework Convention on Climate Change",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Global Warming",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Greenhouse Gas Emissions",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Disasters and Emergencies",
+                        "rank": 4
+                    }
+                ],
+                "multimedia": {
+                    "caption": "The U.N. climate conference is being held in Bel\u00e9m, Brazil.",
+                    "credit": "Fernando Llano\/Associated Press",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/10\/multimedia\/10-int-theworld-lede-hjqz\/10-int-theworld-lede-hjqz-articleLarge.jpg",
+                        "height": 600,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/10\/multimedia\/10-int-theworld-lede-hjqz\/10-int-theworld-lede-hjqz-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "Foreign",
+                "print_page": "",
+                "print_section": "",
+                "pub_date": "2025-11-09T21:00:57Z",
+                "section_name": "World",
+                "snippet": "This year\u2019s U.N. climate talks are being held in Brazil and, so far, they\u2019ve been noteworthy for who isn\u2019t attending.",
+                "source": "The New York Times",
+                "subsection_name": "",
+                "type_of_material": "News",
+                "uri": "nyt:\/\/article\/b0dd312c-9d1d-52cd-84b4-483436adff9b",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/world\/climate-change-un-philippines-typhoon-bbc.html",
+                "word_count": 1555
+            },
+            {
+                "abstract": "Facing Iran\u2019s worst drought in 60 years, the country\u2019s president warned that the capital might need to be evacuated, and some locals promoted cloud-theft conspiracy theories.",
+                "byline": {
+                    "original": "By Sanam Mahoozi and Erika Solomon"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "As Aquifers Dry Up, Tehran Rations Water and Calls for Rain Prayers",
+                    "kicker": "",
+                    "print_headline": ""
+                },
+                "_id": "nyt:\/\/article\/ce47df64-264c-593d-b783-d2a96d48fd9d",
+                "keywords": [
+                    {
+                        "name": "Location",
+                        "value": "Iran",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Drought",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Person",
+                        "value": "Pezeshkian, Masoud",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Location",
+                        "value": "Tehran (Iran)",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Rain",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Rationing and Allocation of Resources",
+                        "rank": 6
+                    }
+                ],
+                "multimedia": {
+                    "caption": "The parched bed of the Kan River along a road west of Tehran, Iran\u2019s capital. The country is facing an increasingly severe water crisis.",
+                    "credit": "Atta Kenare\/Agence France-Presse \u2014 Getty Images",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09int-iran-water-2-fjct\/09int-iran-water-2-fjct-articleLarge.jpg",
+                        "height": 400,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09int-iran-water-2-fjct\/09int-iran-water-2-fjct-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "Foreign",
+                "print_page": "",
+                "print_section": "",
+                "pub_date": "2025-11-09T16:52:11Z",
+                "section_name": "World",
+                "snippet": "Facing Iran\u2019s worst drought in 60 years, the country\u2019s president warned that the capital might need to be evacuated, and some locals promoted cloud-theft conspiracy theories.",
+                "source": "The New York Times",
+                "subsection_name": "Middle East",
+                "type_of_material": "News",
+                "uri": "nyt:\/\/article\/ce47df64-264c-593d-b783-d2a96d48fd9d",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/world\/middleeast\/iran-water-rationing-drought.html",
+                "word_count": 606
+            },
+            {
+                "abstract": "More schools and governments are turning to tech bans to try to keep kids off screens. Do they work?",
+                "byline": {
+                    "original": "By Natasha Singer"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "Banning Social Media",
+                    "kicker": "",
+                    "print_headline": ""
+                },
+                "_id": "nyt:\/\/article\/ade8d2d9-3a7f-520c-89a9-ebafa83ad45d",
+                "keywords": [
+                    {
+                        "name": "Subject",
+                        "value": "Food Stamps",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Social Media",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Beef",
+                        "rank": 4
+                    }
+                ],
+                "multimedia": {
+                    "caption": "A student handing over a cellphone at a school in Brazil.",
+                    "credit": "Bruna Prado\/Associated Press",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/11\/multimedia\/1107-Cell-Phone-Ban-zlpv\/1107-Cell-Phone-Ban-zlpv-articleLarge-v2.jpg",
+                        "height": 600,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/11\/multimedia\/1107-Cell-Phone-Ban-zlpv\/1107-Cell-Phone-Ban-zlpv-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "NYTNow",
+                "print_page": "",
+                "print_section": "",
+                "pub_date": "2025-11-09T12:58:49Z",
+                "section_name": "Briefing",
+                "snippet": "More schools and governments are turning to tech bans to try to keep kids off screens. Do they work?",
+                "source": "The New York Times",
+                "subsection_name": "",
+                "type_of_material": "briefing",
+                "uri": "nyt:\/\/article\/ade8d2d9-3a7f-520c-89a9-ebafa83ad45d",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/briefing\/banning-social-media.html",
+                "word_count": 2073
+            },
+            {
+                "abstract": "More than four million borrowers could potentially benefit from locking in a lower rate. Here\u2019s what to consider.",
+                "byline": {
+                    "original": "By Tara Siegel Bernard"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "With Mortgage Rates Declining, Should You Refinance?",
+                    "kicker": "",
+                    "print_headline": ""
+                },
+                "_id": "nyt:\/\/article\/4aedbab1-e8a0-54b1-8736-46b7ac9a0491",
+                "keywords": [
+                    {
+                        "name": "Subject",
+                        "value": "Personal Finances",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Mortgages",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Content Type: Service",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Federal National Mortgage Assn (Fannie Mae)",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Federal Reserve System",
+                        "rank": 5
+                    }
+                ],
+                "multimedia": {
+                    "caption": "The average interest rate for 30-year fixed mortgages was 6.22 percent last week, according to Freddie Mac. ",
+                    "credit": "Mario Tama\/Getty Images",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09Biz-Mortgages-zlpb\/09Biz-Mortgages-zlpb-articleLarge.jpg",
+                        "height": 381,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09Biz-Mortgages-zlpb\/09Biz-Mortgages-zlpb-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "Business",
+                "print_page": "",
+                "print_section": "",
+                "pub_date": "2025-11-09T10:01:31Z",
+                "section_name": "Business",
+                "snippet": "More than four million borrowers could potentially benefit from locking in a lower rate. Here\u2019s what to consider.",
+                "source": "The New York Times",
+                "subsection_name": "",
+                "type_of_material": "News",
+                "uri": "nyt:\/\/article\/4aedbab1-e8a0-54b1-8736-46b7ac9a0491",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/business\/mortgage-refinance.html",
+                "word_count": 851
+            },
+            {
+                "abstract": "Learned, lively and often irreverent, David McWilliams\u2019s \u201cThe History of Money\u201d is rich with surprising details about currency, then and now.",
+                "byline": {
+                    "original": "By Alexandra Jacobs"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "Making Sense of Dollars and Cents",
+                    "kicker": "Nonfiction",
+                    "print_headline": ""
+                },
+                "_id": "nyt:\/\/article\/77a6433d-e8a0-5fbf-8d4b-80b199181baf",
+                "keywords": [
+                    {
+                        "name": "Subject",
+                        "value": "Books and Literature",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Title",
+                        "value": "The History of Money: A Story of Humanity (Book)",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Person",
+                        "value": "McWilliams, David (Economist)",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Currency",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Banking and Financial Institutions",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "History (Academic Subject)",
+                        "rank": 6
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Economics (Theory and Philosophy)",
+                        "rank": 7
+                    }
+                ],
+                "multimedia": {
+                    "caption": "\u201cThe History of Money\u201d points out surprising financial metaphors in the L. Frank Baum novel that inspired the classic film \u201cThe Wizard of Oz.\u201d",
+                    "credit": "MGM, via Everett Collection",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09tbr-mcwilliams-review-wgpv\/09tbr-mcwilliams-review-wgpv-articleLarge.jpg",
+                        "height": 438,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09tbr-mcwilliams-review-wgpv\/09tbr-mcwilliams-review-wgpv-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "BookReview",
+                "print_page": "",
+                "print_section": "",
+                "pub_date": "2025-11-09T10:01:24Z",
+                "section_name": "Books",
+                "snippet": "Learned, lively and often irreverent, David McWilliams\u2019s \u201cThe History of Money\u201d is rich with surprising details about currency, then and now.",
+                "source": "The New York Times",
+                "subsection_name": "Book Review",
+                "type_of_material": "Review",
+                "uri": "nyt:\/\/article\/77a6433d-e8a0-5fbf-8d4b-80b199181baf",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/books\/review\/the-history-of-money-david-mcwilliams.html",
+                "word_count": 800
+            },
+            {
+                "abstract": "An obsessed table-tennis player (\u201cMarty Supreme\u201d) and musicians in a Neil Diamond tribute band (\u201cSong Sung Blue\u201d) are among the season\u2019s screen gifts.",
+                "byline": {
+                    "original": "By Ben Kenigsberg"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "65 Movies to See This Winter",
+                    "kicker": "",
+                    "print_headline": "Film Listings"
+                },
+                "_id": "nyt:\/\/article\/0e150a29-d955-5ef3-86ba-8b9bc73817b4",
+                "keywords": [
+                    {
+                        "name": "Subject",
+                        "value": "Movies",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Documentary Films and Programs",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Eternity (Movie)",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Jay Kelly (Movie)",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Sirat (Movie)",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Father Mother Sister Brother (Movie)",
+                        "rank": 6
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Hamnet (Movie)",
+                        "rank": 7
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Merrily We Roll Along (Movie)",
+                        "rank": 8
+                    },
+                    {
+                        "name": "Title",
+                        "value": "The Housemaid (Movie)",
+                        "rank": 9
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Wicked: For Good (Movie)",
+                        "rank": 10
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Song Sung Blue (Movie)",
+                        "rank": 11
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Marty Supreme (Movie)",
+                        "rank": 12
+                    },
+                    {
+                        "name": "Title",
+                        "value": "Zootopia 2 (Movie)",
+                        "rank": 13
+                    }
+                ],
+                "multimedia": {
+                    "caption": "Timoth\u00e9e Chalamet is an ambitious table-tennis star in \u201cMarty Supreme,\u201d directed by Josh Safdie.",
+                    "credit": "A24",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09cul-holiday-films-listings-02-cbpl\/09cul-holiday-films-listings-02-cbpl-articleLarge.jpg",
+                        "height": 479,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09cul-holiday-films-listings-02-cbpl\/09cul-holiday-films-listings-02-cbpl-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "Arts&Leisure",
+                "print_page": "12",
+                "print_section": "AR",
+                "pub_date": "2025-11-09T10:00:52Z",
+                "section_name": "Movies",
+                "snippet": "An obsessed table-tennis player (\u201cMarty Supreme\u201d) and musicians in a Neil Diamond tribute band (\u201cSong Sung Blue\u201d) are among the season\u2019s screen gifts.",
+                "source": "The New York Times",
+                "subsection_name": "",
+                "type_of_material": "News",
+                "uri": "nyt:\/\/article\/0e150a29-d955-5ef3-86ba-8b9bc73817b4",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/movies\/movies-november-december-2025.html",
+                "word_count": 2629
+            },
+            {
+                "abstract": "A growing coalition of conservatives are speaking out against hormonal birth control, while promoting a more \u201cnatural\u201d alternative.",
+                "byline": {
+                    "original": "By Caroline Kitchener"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "The MAHA-Fueled Rise of Natural Family Planning",
+                    "kicker": "",
+                    "print_headline": ""
+                },
+                "_id": "nyt:\/\/article\/a1f77865-bf64-58d0-a773-99ee7f18bd24",
+                "keywords": [
+                    {
+                        "name": "Subject",
+                        "value": "Birth Control and Family Planning",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Hormones",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "United States Politics and Government",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Women and Girls",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Menstruation",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Social Media",
+                        "rank": 6
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Pregnancy and Childbirth",
+                        "rank": 7
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Sex",
+                        "rank": 8
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "28 Wellness LLC",
+                        "rank": 9
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "American College of Obstetricians and Gynecologists",
+                        "rank": 10
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Health and Human Services Department",
+                        "rank": 11
+                    },
+                    {
+                        "name": "Person",
+                        "value": "Hugoboom, Brittany",
+                        "rank": 12
+                    },
+                    {
+                        "name": "Person",
+                        "value": "Means, Casey (1987- )",
+                        "rank": 13
+                    },
+                    {
+                        "name": "Person",
+                        "value": "Kennedy, Robert F Jr",
+                        "rank": 14
+                    },
+                    {
+                        "name": "Person",
+                        "value": "Thiel, Peter A",
+                        "rank": 15
+                    },
+                    {
+                        "name": "Person",
+                        "value": "Trump, Donald J",
+                        "rank": 16
+                    }
+                ],
+                "multimedia": {
+                    "caption": "Samantha Kopy teaches a virtual class on natural family planning methods.",
+                    "credit": "Maddie McGarvey for The New York Times",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/10\/23\/multimedia\/00dc-birthcontrol-alt-vphz\/00dc-birthcontrol-alt-vphz-articleLarge.jpg",
+                        "height": 900,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/10\/23\/multimedia\/00dc-birthcontrol-alt-vphz\/00dc-birthcontrol-alt-vphz-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "Washington",
+                "print_page": "",
+                "print_section": "",
+                "pub_date": "2025-11-09T10:00:10Z",
+                "section_name": "U.S.",
+                "snippet": "A growing coalition of conservatives are speaking out against hormonal birth control, while promoting a more \u201cnatural\u201d alternative.",
+                "source": "The New York Times",
+                "subsection_name": "Politics",
+                "type_of_material": "News",
+                "uri": "nyt:\/\/article\/a1f77865-bf64-58d0-a773-99ee7f18bd24",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/us\/politics\/maha-natural-family-planning.html",
+                "word_count": 2009
+            },
+            {
+                "abstract": "At an annual gathering in Puerto Rico for New York\u2019s political class, former foes of Zohran Mamdani put aside their differences and tried to get information about his inner circle.",
+                "byline": {
+                    "original": "By Nicholas Fandos, Emma G. Fitzsimmons and Benjamin Oreskes"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "Mamdani, Mofongo and Rum: Democratic Squabbles Fade Away, for Now",
+                    "kicker": "",
+                    "print_headline": ""
+                },
+                "_id": "nyt:\/\/article\/cc0f116c-bd0b-518b-be6d-0e41ad5b09bb",
+                "keywords": [
+                    {
+                        "name": "Person",
+                        "value": "Mamdani, Zohran",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Location",
+                        "value": "New York City",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Somos Inc (Nonprofit)",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Elections, Mayors",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Politics and Government",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Lobbying and Lobbyists",
+                        "rank": 6
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Taxation",
+                        "rank": 7
+                    }
+                ],
+                "multimedia": {
+                    "caption": "At the political gathering in San Juan, P.R., known as Somos, Zohran Mamdani got what was described as treatment befitting \u201cone of the Beatles.\u201d",
+                    "credit": "Erika P. Rodriguez for The New York Times",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09met-mamadani-somos-01-tqkl\/09met-mamadani-somos-01-tqkl-articleLarge.jpg",
+                        "height": 400,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/09\/multimedia\/09met-mamadani-somos-01-tqkl\/09met-mamadani-somos-01-tqkl-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "Metro",
+                "print_page": "",
+                "print_section": "",
+                "pub_date": "2025-11-09T08:00:33Z",
+                "section_name": "New York",
+                "snippet": "At an annual gathering in Puerto Rico for New York\u2019s political class, former foes of Zohran Mamdani put aside their differences and tried to get information about his inner circle.",
+                "source": "The New York Times",
+                "subsection_name": "",
+                "type_of_material": "News",
+                "uri": "nyt:\/\/article\/cc0f116c-bd0b-518b-be6d-0e41ad5b09bb",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/nyregion\/mamdani-somos-puerto-rico.html",
+                "word_count": 1452
+            },
+            {
+                "abstract": "Boycotts of Israeli universities, largely imposed in Europe, have multiplied since the start of the war and reflect Israel\u2019s international isolation over its conduct in Gaza.",
+                "byline": {
+                    "original": "By Elisabeth Bumiller"
+                },
+                "document_type": "article",
+                "headline": {
+                    "main": "Israeli Academics Find Themselves Isolated Despite Gaza Cease-Fire",
+                    "kicker": "",
+                    "print_headline": "Boycotts of Israeli Academics Continue Despite Cease-Fire"
+                },
+                "_id": "nyt:\/\/article\/93147da7-5f76-5953-8323-6938b146b7ed",
+                "keywords": [
+                    {
+                        "name": "Subject",
+                        "value": "Boycotts",
+                        "rank": 1
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Israel-Gaza War (2023- )",
+                        "rank": 2
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Pro-Palestinian Campus Protests (2023- )",
+                        "rank": 3
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Colleges and Universities",
+                        "rank": 4
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "War Crimes, Genocide and Crimes Against Humanity",
+                        "rank": 5
+                    },
+                    {
+                        "name": "Subject",
+                        "value": "Anti-Semitism",
+                        "rank": 6
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "American Studies Assn",
+                        "rank": 7
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Boycott, Divestment and Sanctions (BDS)",
+                        "rank": 8
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Harvard University",
+                        "rank": 9
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Harvard Medical School",
+                        "rank": 10
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Israel Institute of Technology",
+                        "rank": 11
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Hebrew University",
+                        "rank": 12
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Massachusetts Institute of Technology",
+                        "rank": 13
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Tel Aviv University",
+                        "rank": 14
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "University of Amsterdam",
+                        "rank": 15
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Max Planck Society",
+                        "rank": 16
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Stanford University",
+                        "rank": 17
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "Technion-Israel Institute of Technology",
+                        "rank": 18
+                    },
+                    {
+                        "name": "Organization",
+                        "value": "University of California, Berkeley",
+                        "rank": 19
+                    },
+                    {
+                        "name": "Person",
+                        "value": "Netanyahu, Benjamin",
+                        "rank": 20
+                    },
+                    {
+                        "name": "Person",
+                        "value": "Trump, Donald J",
+                        "rank": 21
+                    }
+                ],
+                "multimedia": {
+                    "caption": "A protest in May 2024 calling for the University of Amsterdam to cut ties with Israeli institutions. ",
+                    "credit": "Ramon Van Flymen\/EPA, via Shutterstock",
+                    "default": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/06\/multimedia\/00int-boycotts-israel-01-kzmh\/00int-boycotts-israel-01-kzmh-articleLarge.jpg",
+                        "height": 400,
+                        "width": 600
+                    },
+                    "thumbnail": {
+                        "url": "https:\/\/static01.nyt.com\/images\/2025\/11\/06\/multimedia\/00int-boycotts-israel-01-kzmh\/00int-boycotts-israel-01-kzmh-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75
+                    }
+                },
+                "news_desk": "Foreign",
+                "print_page": "10",
+                "print_section": "A",
+                "pub_date": "2025-11-09T08:00:12Z",
+                "section_name": "World",
+                "snippet": "Boycotts of Israeli universities, largely imposed in Europe, have multiplied since the start of the war and reflect Israel\u2019s international isolation over its conduct in Gaza.",
+                "source": "The New York Times",
+                "subsection_name": "Middle East",
+                "type_of_material": "News",
+                "uri": "nyt:\/\/article\/93147da7-5f76-5953-8323-6938b146b7ed",
+                "web_url": "https:\/\/www.nytimes.com\/2025\/11\/09\/world\/middleeast\/boycotts-israel.html",
+                "word_count": 1387
+            }
+        ],
+        "metadata": {
+            "hits": 10000,
+            "offset": 0,
+            "time": 443
+        }
+    }
+}

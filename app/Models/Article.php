@@ -27,4 +27,22 @@ class Article extends Model
     {
         return $this->belongsToMany(Category::class);
     }
+
+    public function scopeDateFrom($query, string $date)
+    {
+        return $query->where('published_at', '>=', $date);
+    }
+
+    public function scopeDateTo($query, string $date)
+    {
+        return $query->where('published_at', '<=', $date);
+    }
+
+    public function scopeSearch($query, string $term)
+    {
+        return $query->where(fn($q) =>
+            $q->where('title', 'like', "%{$term}%")
+              ->orWhere('content', 'like', "%{$term}%")
+        );
+    }
 }
