@@ -17,7 +17,7 @@ class Article extends Model
         return  QueryBuilder::for(static::class)
             ->with(['authors', 'categories'])
             ->allowedFilters([
-                AllowedFilter::exact('source'),
+                AllowedFilter::exact('sources', 'source'),
                 AllowedFilter::exact('categories', 'categories.name'),
                 AllowedFilter::exact('authors', 'authors.name'),
                 AllowedFilter::scope('date_from'),

@@ -62,7 +62,7 @@ class ArticleApiTest extends TestCase
 
     public function test_it_filters_by_source(): void
     {
-        $response = $this->getJson('/api/articles?filter[source]=NYTimes');
+        $response = $this->getJson('/api/articles?filter[sources]=NYTimes');
 
         $response->assertOk();
 

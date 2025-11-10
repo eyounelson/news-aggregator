@@ -7,6 +7,7 @@ use App\Services\News\Actions\SaveArticlesAction;
 use App\Types\NewsSource;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+use Throwable;
 
 class NewsUpdateCommand extends Command
 {
@@ -21,7 +22,13 @@ class NewsUpdateCommand extends Command
         foreach (NewsSource::cases() as $source) {
             $this->line('Updating from ' . $source->name);
 
-            $updateCount = DB::transaction( fn() => app(SaveArticlesAction::class)->execute($source));
+            try {
+                $updateCount = DB::transaction( fn() => app(SaveArticlesAction::class)->execute($source));
+            } catch (Throwable $e) {
+                $this->error("Failed to save articles from $source->name. Error: {$e->getMessage()}");
+
+                continue;
+            }
 
             $this->info("DB has been updated with $updateCount new articles from $source->name.");
         }

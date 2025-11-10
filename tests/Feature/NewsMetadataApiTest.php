@@ -58,9 +58,11 @@ class NewsMetadataApiTest extends TestCase
 
         $response->assertOk()
             ->assertJson([
-                'NYTimes',
-                'TheGuardian',
-                'NewsApi',
+                'data' => [
+                    'NYTimes',
+                    'TheGuardian',
+                    'NewsApi',
+                ]
             ]);
     }
 

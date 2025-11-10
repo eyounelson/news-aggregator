@@ -15,6 +15,6 @@ class SourceController
             NewsSource::cases()
         );
 
-        return response()->json($sources);
+        return response()->json(['data' => $sources]);
     }
 }
