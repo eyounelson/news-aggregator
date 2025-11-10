@@ -5,10 +5,27 @@ namespace App\Models;
 use App\Types\NewsSource;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\QueryBuilder\AllowedFilter;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class Article extends Model
 {
     protected $guarded = [];
+
+    public static function filter()
+    {
+        return  QueryBuilder::for(static::class)
+            ->with(['authors', 'categories'])
+            ->allowedFilters([
+                AllowedFilter::exact('source'),
+                AllowedFilter::exact('categories', 'categories.name'),
+                AllowedFilter::exact('authors', 'authors.name'),
+                AllowedFilter::scope('date_from'),
+                AllowedFilter::scope('date_to'),
+                AllowedFilter::scope('search'),
+            ])
+            ->defaultSort('-published_at');
+    }
 
     protected function casts(): array
     {
