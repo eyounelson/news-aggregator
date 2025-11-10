@@ -2,9 +2,10 @@
 
 namespace App\Services\News;
 
-use App\Services\News\Data\Article;
+use App\Services\News\Data\ArticleData;
 use App\Services\News\Factory\NewsAggregatorContract;
 use App\Types\NewsSource;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Throwable;
@@ -13,7 +14,7 @@ use TypeError;
 class NYTimesNews implements NewsAggregatorContract
 {
 
-    public function articles(): array
+    public function articles(): Collection
     {
         /**
          * Fetch articles using the Article Search API
@@ -32,13 +33,13 @@ class NYTimesNews implements NewsAggregatorContract
             ->get("/svc/search/v2/articlesearch.json", $query)
             ->collect('response.docs');
 
-       return collect($articles)->map(fn($article) => $this->formatArticle($article))->filter()->toArray();
+       return collect($articles)->map(fn($article) => $this->formatArticle($article))->filter();
     }
 
-    private function formatArticle($article):?Article
+    private function formatArticle($article):?ArticleData
     {
         try {
-           return new Article(
+           return new ArticleData(
                source: NewsSource::NYTimes,
                title: $article['headline']['main'],
                excerpt: $article['snippet'],

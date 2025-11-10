@@ -2,12 +2,13 @@
 
 namespace App\Services\News\Factory;
 
-use App\Services\News\Data\Article;
+use App\Services\News\Data\ArticleData;
+use Illuminate\Support\Collection;
 
 interface NewsAggregatorContract
 {
     /**
-     * @return array<Article>
+     * @return Collection<ArticleData>
      */
-    public function articles(): array;
+    public function articles(): Collection;
 }

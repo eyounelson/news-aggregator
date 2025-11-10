@@ -2,10 +2,11 @@
 
 namespace App\Services\News;
 
-use App\Services\News\Data\Article;
+use App\Services\News\Data\ArticleData;
 use App\Services\News\Factory\NewsAggregatorContract;
 use App\Types\NewsSource;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -13,7 +14,7 @@ use Illuminate\Support\Str;
 class TheGuardianNews implements NewsAggregatorContract
 {
 
-    public function articles(): array
+    public function articles(): Collection
     {
         /**
          * Fetch articles using the Content API
@@ -38,15 +39,15 @@ class TheGuardianNews implements NewsAggregatorContract
             ->get("/search", $query)
             ->collect('response.results');
 
-        return collect($articles)->map(fn($article) => $this->formatArticle($article))->filter()->toArray();
+        return collect($articles)->map(fn($article) => $this->formatArticle($article))->filter();
     }
 
-    private function formatArticle(array $article): ?Article
+    private function formatArticle(array $article): ?ArticleData
     {
         $mainImage = (array)Arr::first($article['elements'], fn($el) => $el['type'] === 'image' && $el['relation'] === 'main');
         $imageUrl = Arr::get($mainImage, 'assets.0.file');
 
-        return new Article(
+        return new ArticleData(
             source: NewsSource::TheGuardian,
             title: $article['webTitle'],
             excerpt: Str::limit($article['webTitle'], end: ''),
@@ -54,18 +55,14 @@ class TheGuardianNews implements NewsAggregatorContract
             url: $article['webUrl'],
             imageUrl: $imageUrl,
             date: $article['webPublicationDate'],
-            authors: [
-                collect($article['tags'])
-                    ->where('type', 'contributor')
-                    ->pluck('webTitle')
-                    ->toArray(),
-            ],
-            categories: [
-                collect($article['tags'])
-                    ->where('type', 'keyword')
-                    ->pluck('webTitle')
-                    ->toArray(),
-            ]
+            authors:    collect($article['tags'])
+                ->where('type', 'contributor')
+                ->pluck('webTitle')
+                ->toArray(),
+            categories:   collect($article['tags'])
+                ->where('type', 'keyword')
+                ->pluck('webTitle')
+                ->toArray(),
         );
     }
 }

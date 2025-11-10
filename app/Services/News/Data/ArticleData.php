@@ -4,7 +4,7 @@ namespace App\Services\News\Data;
 
 use App\Types\NewsSource;
 
-readonly class Article
+readonly class ArticleData
 {
     public function __construct(
         public NewsSource $source,

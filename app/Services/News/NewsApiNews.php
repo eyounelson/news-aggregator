@@ -2,10 +2,11 @@
 
 namespace App\Services\News;
 
-use App\Services\News\Data\Article;
+use App\Services\News\Data\ArticleData;
 use App\Services\News\Factory\NewsAggregatorContract;
 use App\Types\NewsSource;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -14,7 +15,7 @@ use TypeError;
 class NewsApiNews implements NewsAggregatorContract
 {
 
-    public function articles(): array
+    public function articles(): Collection
     {
         $baseUrl = 'https://newsapi.org/v2';
 
@@ -31,10 +32,10 @@ class NewsApiNews implements NewsAggregatorContract
             ->withHeader('x-api-key', config('services.news_api.api_key'))
             ->get("/everything", $query)->collect('articles');
 
-        return $articles->map(fn($article) => $this->formatArticle($article))->filter()->toArray();
+        return $articles->map(fn($article) => $this->formatArticle($article))->filter();
     }
 
-    private function formatArticle(array $article): ?Article
+    private function formatArticle(array $article): ?ArticleData
     {
         try {
             // Use the longest of content or description as the article body.
@@ -42,7 +43,7 @@ class NewsApiNews implements NewsAggregatorContract
             usort($contents, fn($a, $b) => mb_strlen($b) > mb_strlen($a));
             $content = $contents[0];
 
-            return new Article(
+            return new ArticleData(
                 source: NewsSource::NewsApi,
                 title: $article['title'],
                 excerpt: $article['content'] ?? Str::limit($content, end: ''),
