@@ -11,4 +11,6 @@ interface NewsAggregatorContract
      * @return Collection<ArticleData>
      */
     public function articles(): Collection;
+
+    public function formatArticle(array $article): ?ArticleData;
 }

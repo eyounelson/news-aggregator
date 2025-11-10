@@ -9,6 +9,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use TypeError;
 
@@ -35,7 +36,7 @@ class NewsApiNews implements NewsAggregatorContract
         return $articles->map(fn($article) => $this->formatArticle($article))->filter();
     }
 
-    private function formatArticle(array $article): ?ArticleData
+    public function formatArticle(array $article): ?ArticleData
     {
         try {
             // Use the longest of content or description as the article body.
@@ -57,6 +58,8 @@ class NewsApiNews implements NewsAggregatorContract
                 categories: [],
             );
         } catch (TypeError $e) {
+            Log::error("Article Parsing failed with error: {$e->getMessage()}", ['source' => "NewsApi", 'article' => $article]);
+
             return null;
         }
     }

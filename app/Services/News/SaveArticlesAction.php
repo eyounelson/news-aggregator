@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\DB;
 
 class SaveArticlesAction
 {
+    private NewsSource $source;
+
     public function execute(NewsSource $source): int
     {
+        $this->source = $source;
+
         $articles = NewsAggregatorFactory::make($source)->articles();
 
         $updateCount = $this->saveArticles($articles);
@@ -51,7 +55,7 @@ class SaveArticlesAction
         $authors = $articles->map(fn(ArticleData $article) => $article->authors)->flatten()->filter();
 
         $data = $authors->map(fn($author) => [
-            'source' => $articles[0]->source,
+            'source' => $this->source,
             'name' => $author
         ]);
 

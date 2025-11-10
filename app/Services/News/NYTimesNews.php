@@ -8,6 +8,7 @@ use App\Types\NewsSource;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Throwable;
 use TypeError;
 
@@ -36,7 +37,7 @@ class NYTimesNews implements NewsAggregatorContract
        return collect($articles)->map(fn($article) => $this->formatArticle($article))->filter();
     }
 
-    private function formatArticle($article):?ArticleData
+    public function formatArticle($article):?ArticleData
     {
         try {
            return new ArticleData(
@@ -55,6 +56,8 @@ class NYTimesNews implements NewsAggregatorContract
                     ->toArray(),
            );
         } catch (Throwable $e) {
+            Log::error("Article Parsing failed with error: {$e->getMessage()}", ['source' => "NyTimes", 'article' => $article]);
+
             return null;
         }
     }
