@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Services\News\Factory\NewsAggregatorFactory;
-use App\Services\News\SaveArticlesAction;
+use App\Services\News\Actions\SaveArticlesAction;
 use App\Types\NewsSource;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;

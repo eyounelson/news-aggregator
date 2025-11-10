@@ -2,7 +2,7 @@
 
 namespace Tests\Common;
 
-use App\Services\News\SaveArticlesAction;
+use App\Services\News\Actions\SaveArticlesAction;
 use App\Types\NewsSource;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
@@ -30,8 +30,6 @@ trait FakesNewsApiResponses
 
     protected function saveArticlesForAllSources(): void
     {
-        foreach (NewsSource::cases() as $source) {
-            app(SaveArticlesAction::class)->execute($source);
-        }
+        $this->artisan('news:update');
     }
 }

@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use App\Models\Article;
 use App\Models\Author;
 use App\Models\Category;
-use App\Services\News\SaveArticlesAction;
+use App\Services\News\Actions\SaveArticlesAction;
 use App\Types\NewsSource;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Tests\Common\FakesNewsApiResponses;
