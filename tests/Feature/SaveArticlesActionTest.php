@@ -13,8 +13,8 @@ use Tests\TestCase;
 
 class SaveArticlesActionTest extends TestCase
 {
-    use LazilyRefreshDatabase;
     use FakesNewsApiResponses;
+    use LazilyRefreshDatabase;
 
     public function test_it_saves_articles_from_all_sources(): void
     {

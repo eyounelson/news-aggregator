@@ -2,16 +2,14 @@
 
 namespace Tests\Feature;
 
-use App\Models\Category;
-use App\Models\Author;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Tests\Common\FakesNewsApiResponses;
 use Tests\TestCase;
 
 class NewsMetadataApiTest extends TestCase
 {
-    use LazilyRefreshDatabase;
     use FakesNewsApiResponses;
+    use LazilyRefreshDatabase;
 
     public function test_it_lists_categories(): void
     {
@@ -25,7 +23,7 @@ class NewsMetadataApiTest extends TestCase
                         'name',
                         'created_at',
                         'updated_at',
-                    ]
+                    ],
                 ],
             ]);
 
@@ -45,7 +43,7 @@ class NewsMetadataApiTest extends TestCase
                         'source',
                         'created_at',
                         'updated_at',
-                    ]
+                    ],
                 ],
             ]);
 
@@ -62,7 +60,7 @@ class NewsMetadataApiTest extends TestCase
                     'NYTimes',
                     'TheGuardian',
                     'NewsApi',
-                ]
+                ],
             ]);
     }
 

@@ -14,7 +14,7 @@ class Article extends Model
 
     public static function filter()
     {
-        return  QueryBuilder::for(static::class)
+        return QueryBuilder::for(static::class)
             ->with(['authors', 'categories'])
             ->allowedFilters([
                 AllowedFilter::exact('sources', 'source'),
@@ -57,9 +57,8 @@ class Article extends Model
 
     public function scopeSearch($query, string $term)
     {
-        return $query->where(fn($q) =>
-            $q->where('title', 'like', "%{$term}%")
-              ->orWhere('content', 'like', "%{$term}%")
+        return $query->where(fn ($q) => $q->where('title', 'like', "%{$term}%")
+            ->orWhere('content', 'like', "%{$term}%")
         );
     }
 }

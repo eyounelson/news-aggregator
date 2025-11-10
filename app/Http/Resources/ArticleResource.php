@@ -23,16 +23,16 @@ class ArticleResource extends JsonResource
             'url' => $this->url,
             'image_url' => $this->image_url,
             'published_at' => $this->published_at,
-            'authors' => $this->whenLoaded('authors', fn() => $this->authors->map(fn($author) => [
-                    'id' => $author->id,
-                    'name' => $author->name,
-                    'source' => $author->source->name,
-                ])
+            'authors' => $this->whenLoaded('authors', fn () => $this->authors->map(fn ($author) => [
+                'id' => $author->id,
+                'name' => $author->name,
+                'source' => $author->source->name,
+            ])
             ),
-            'categories' => $this->whenLoaded('categories', fn() => $this->categories->map(fn($category) => [
-                    'id' => $category->id,
-                    'name' => $category->name,
-                ])
+            'categories' => $this->whenLoaded('categories', fn () => $this->categories->map(fn ($category) => [
+                'id' => $category->id,
+                'name' => $category->name,
+            ])
             ),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,

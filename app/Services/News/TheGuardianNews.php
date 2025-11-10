@@ -7,7 +7,6 @@ use App\Services\News\Factory\NewsAggregatorContract;
 use App\Types\NewsSource;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -15,14 +14,12 @@ use Throwable;
 
 class TheGuardianNews implements NewsAggregatorContract
 {
-
     public function articles(): Collection
     {
         /**
          * Fetch articles using the Content API
          * See https://open-platform.theguardian.com/documentation/search
          */
-
         $baseUrl = 'https://content.guardianapis.com';
         $apiKey = config('services.the_guardian.api_key');
 
@@ -38,15 +35,15 @@ class TheGuardianNews implements NewsAggregatorContract
         ];
 
         $articles = Http::baseUrl($baseUrl)
-            ->get("/search", $query)
+            ->get('/search', $query)
             ->collect('response.results');
 
-        return collect($articles)->map(fn($article) => $this->formatArticle($article))->filter();
+        return collect($articles)->map(fn ($article) => $this->formatArticle($article))->filter();
     }
 
     public function formatArticle(array $article): ?ArticleData
     {
-        $mainImage = (array)Arr::first($article['elements'], fn($el) => $el['type'] === 'image' && $el['relation'] === 'main');
+        $mainImage = (array) Arr::first($article['elements'], fn ($el) => $el['type'] === 'image' && $el['relation'] === 'main');
         $imageUrl = Arr::get($mainImage, 'assets.0.file');
 
         try {
@@ -58,17 +55,17 @@ class TheGuardianNews implements NewsAggregatorContract
                 url: $article['webUrl'],
                 imageUrl: $imageUrl,
                 date: $article['webPublicationDate'],
-                authors:    collect($article['tags'])
+                authors: collect($article['tags'])
                     ->where('type', 'contributor')
                     ->pluck('webTitle')
                     ->toArray(),
-                categories:   collect($article['tags'])
+                categories: collect($article['tags'])
                     ->where('type', 'keyword')
                     ->pluck('webTitle')
                     ->toArray(),
             );
         } catch (Throwable $e) {
-            Log::error("Article Parsing failed with error: {$e->getMessage()}", ['source' => "NyTimes", 'article' => $article]);
+            Log::error("Article Parsing failed with error: {$e->getMessage()}", ['source' => 'NyTimes', 'article' => $article]);
 
             return null;
         }

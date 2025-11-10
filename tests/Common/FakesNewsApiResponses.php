@@ -2,8 +2,6 @@
 
 namespace Tests\Common;
 
-use App\Services\News\Actions\SaveArticlesAction;
-use App\Types\NewsSource;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 

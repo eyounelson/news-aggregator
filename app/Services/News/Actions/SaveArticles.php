@@ -12,7 +12,7 @@ class SaveArticles
 {
     public function execute(Collection $articles): int
     {
-        $data = $articles->map(fn(ArticleData $article) => [
+        $data = $articles->map(fn (ArticleData $article) => [
             'source' => $article->source,
             'title' => $article->title,
             'excerpt' => $article->excerpt,
@@ -31,7 +31,7 @@ class SaveArticles
 
     private function parseDate(?string $date): ?Carbon
     {
-        if (!$date) {
+        if (! $date) {
             return null;
         }
 

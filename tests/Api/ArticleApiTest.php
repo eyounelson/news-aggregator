@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Models\Article;
 use App\Types\NewsSource;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Illuminate\Support\Carbon;
@@ -11,8 +10,8 @@ use Tests\TestCase;
 
 class ArticleApiTest extends TestCase
 {
-    use LazilyRefreshDatabase;
     use FakesNewsApiResponses;
+    use LazilyRefreshDatabase;
 
     public function test_it_lists_articles(): void
     {
@@ -31,14 +30,14 @@ class ArticleApiTest extends TestCase
                         'image_url',
                         'published_at',
                         'authors' => [
-                            '*' => ['id', 'name', 'source']
+                            '*' => ['id', 'name', 'source'],
                         ],
                         'categories' => [
-                            '*' => ['id', 'name']
+                            '*' => ['id', 'name'],
                         ],
                         'created_at',
                         'updated_at',
-                    ]
+                    ],
                 ],
                 'links',
                 'meta',
@@ -67,7 +66,7 @@ class ArticleApiTest extends TestCase
         $response->assertOk();
 
         $response->collect('data')
-            ->every(fn($article) => $this->assertEquals($article['source'], NewsSource::NYTimes->name));
+            ->every(fn ($article) => $this->assertEquals($article['source'], NewsSource::NYTimes->name));
     }
 
     public function test_it_filters_by_category(): void
@@ -79,9 +78,9 @@ class ArticleApiTest extends TestCase
         $articles = $response->json('data');
         $this->assertGreaterThan(0, count($articles));
 
-      foreach ($articles as $article) {
-          $this->assertNotNull(collect($article['categories'])->firstWhere('name', 'Arts'));
-      }
+        foreach ($articles as $article) {
+            $this->assertNotNull(collect($article['categories'])->firstWhere('name', 'Arts'));
+        }
     }
 
     public function test_it_filters_by_author(): void
@@ -107,7 +106,7 @@ class ArticleApiTest extends TestCase
         $articles = $response->collect('data');
 
         $articles->every(
-            fn($article) =>  $this->assertTrue(
+            fn ($article) => $this->assertTrue(
                 Carbon::parse($article['published_at'])->gte('2025-11-09')
             )
         );
@@ -122,7 +121,7 @@ class ArticleApiTest extends TestCase
         $articles = $response->collect('data');
 
         $articles->every(
-            fn($article) =>  $this->assertTrue(
+            fn ($article) => $this->assertTrue(
                 Carbon::parse($article['published_at'])->lte('2025-11-09 23:59:59')
             )
         );
@@ -140,7 +139,7 @@ class ArticleApiTest extends TestCase
         $searchTerm = 'climate';
 
         $articles->every(
-            fn($article) => $this->assertTrue(
+            fn ($article) => $this->assertTrue(
                 str_contains($article['title'], $searchTerm) || str_contains($article['content'], $searchTerm)
             )
         );

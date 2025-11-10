@@ -131,5 +131,5 @@ return [
             '/{\s,}|,/',
             env('APP_NEWS_KEYWORDS', 'technology,blockchain,crypto,entertainment')
         ),
-    ]
+    ],
 ];

@@ -47,7 +47,7 @@ class SyncRelationships
 
     private function parseDate(?string $date): ?Carbon
     {
-        if (!$date) {
+        if (! $date) {
             return null;
         }
 

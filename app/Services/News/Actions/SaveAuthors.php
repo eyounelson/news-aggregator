@@ -3,7 +3,6 @@
 namespace App\Services\News\Actions;
 
 use App\Models\Author;
-use App\Services\News\Data\ArticleData;
 use App\Types\NewsSource;
 use Illuminate\Support\Collection;
 
@@ -15,9 +14,9 @@ class SaveAuthors
             ->pluck('authors')
             ->flatten()
             ->filter()
-            ->map(fn($author) => [
+            ->map(fn ($author) => [
                 'source' => $source->name,
-                'name' => $author
+                'name' => $author,
             ]);
 
         if ($authors->isNotEmpty()) {
