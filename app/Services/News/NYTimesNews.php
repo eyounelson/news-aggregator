@@ -5,6 +5,7 @@ namespace App\Services\News;
 use App\Services\News\Data\ArticleData;
 use App\Services\News\Factory\NewsAggregatorContract;
 use App\Types\NewsSource;
+use DomainException;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -19,7 +20,9 @@ class NYTimesNews implements NewsAggregatorContract
          * See https://developer.nytimes.com/docs/articlesearch-product/1/overview
          */
         $baseUrl = 'https://api.nytimes.com';
-        $apiKey = config('services.ny_times.api_key');
+        if (! $apiKey = config('services.ny_times.api_key')) {
+            throw new DomainException('NYTimes API Key has not been configured.');
+        }
 
         $query = [
             'api-key' => $apiKey,
@@ -28,6 +31,7 @@ class NYTimesNews implements NewsAggregatorContract
 
         $articles = Http::baseUrl($baseUrl)
             ->get('/svc/search/v2/articlesearch.json', $query)
+            ->throw()
             ->collect('response.docs');
 
         return collect($articles)->map(fn ($article) => $this->formatArticle($article))->filter();

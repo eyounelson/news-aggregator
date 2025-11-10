@@ -127,9 +127,11 @@ return [
         /**
          * A list of keywords that aggregated news will be narrowed tos.
          */
-        'keywords' => preg_split(
-            '/{\s,}|,/',
-            env('APP_NEWS_KEYWORDS', 'technology,blockchain,crypto,entertainment')
-        ),
+        'keywords' => collect(
+            explode(',', env('APP_NEWS_KEYWORDS', 'technology,blockchain,crypto,entertainment'))
+        )
+            ->map('trim')
+            ->filter()
+            ->toArray(),
     ],
 ];

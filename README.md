@@ -48,6 +48,14 @@ NY_TIMES_API_KEY=
 THE_GUARDIAN_API_KEY=
 ```
 
+By default, the app will attempt to find news articles with these keywords: technology, blockchain, crypto ,entertainment.
+You may update this by setting the `APP_NEWS_KEYWORDS` env variable with a comma seperated list of your
+keywords of choice
+
+```
+APP_NEWS_KEYWORDS=technology,blockchain,programming,cyber security,cyber crime
+```
+
 ### Setup The Database
 Edit the `.env` file once again, this time update the database credentials accordingly.
 This project has been tested wth MySQL 8+ and SQLite:

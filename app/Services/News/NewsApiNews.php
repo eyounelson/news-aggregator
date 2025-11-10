@@ -5,6 +5,7 @@ namespace App\Services\News;
 use App\Services\News\Data\ArticleData;
 use App\Services\News\Factory\NewsAggregatorContract;
 use App\Types\NewsSource;
+use DomainException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
@@ -20,6 +21,10 @@ class NewsApiNews implements NewsAggregatorContract
 
         $keywords = config('app.news.keywords');
 
+        if (! $apiKey = config('services.news_api.api_key')) {
+            throw new DomainException('NewsAPI.Org API Key has not been configured.');
+        }
+
         $query = [
             'q' => implode(' OR ', $keywords),
             'pageSize' => 100,
@@ -28,7 +33,8 @@ class NewsApiNews implements NewsAggregatorContract
         ];
 
         $articles = Http::baseUrl($baseUrl)
-            ->withHeader('x-api-key', config('services.news_api.api_key'))
+            ->withHeader('x-api-key', $apiKey)
+            ->throw()
             ->get('/everything', $query)->collect('articles');
 
         return $articles->map(fn ($article) => $this->formatArticle($article))->filter();

@@ -5,6 +5,7 @@ namespace App\Services\News;
 use App\Services\News\Data\ArticleData;
 use App\Services\News\Factory\NewsAggregatorContract;
 use App\Types\NewsSource;
+use DomainException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
@@ -21,7 +22,10 @@ class TheGuardianNews implements NewsAggregatorContract
          * See https://open-platform.theguardian.com/documentation/search
          */
         $baseUrl = 'https://content.guardianapis.com';
-        $apiKey = config('services.the_guardian.api_key');
+
+        if (! $apiKey = config('services.the_guardian.api_key')) {
+            throw new DomainException('The Guardian API Key has not been configured.');
+        }
 
         $keywords = config('app.news.keywords');
 
@@ -36,6 +40,7 @@ class TheGuardianNews implements NewsAggregatorContract
 
         $articles = Http::baseUrl($baseUrl)
             ->get('/search', $query)
+            ->throw()
             ->collect('response.results');
 
         return collect($articles)->map(fn ($article) => $this->formatArticle($article))->filter();
